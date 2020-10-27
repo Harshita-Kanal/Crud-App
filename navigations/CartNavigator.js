@@ -35,7 +35,6 @@ const ProductsNavigator = createStackNavigator(
 const CartNavigator = createDrawerNavigator(
   {
     Products: ProductsNavigator,
-    Orders: OrdersNavigator,
   },
   {
     contentOptions: {

@@ -31,18 +31,14 @@ const styles = StyleSheet.create({
     elevation: 5,
     borderRadius: 10,
     backgroundColor: "white",
-    height: 300,
+    height: 100,
     margin: 20,
     fontFamily: "sansita-bold",
   },
 
-  image: {
-    width: "100%",
-    height: "60%",
-  },
-
   btn: {
     marginRight: 20,
+    marginVertical: 100,
   },
 
   title: {
@@ -62,21 +58,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingLeft: 20,
     justifyContent: "center",
-    height: "25%",
     marginRight: 20,
   },
 
   details: {
     alignItems: "center",
-    height: "15%",
-  },
-
-  imageContainer: {
-    width: "100%",
-    height: "100%",
-    borderTopLeftRadius: 10,
-    borderBottomRightRadius: 10,
-    overflow: "hidden",
   },
 });
 
