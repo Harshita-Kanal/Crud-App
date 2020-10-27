@@ -1,24 +1,23 @@
 import React from "react";
-import { View, Text, Button, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, Button, StyleSheet } from "react-native";
+import { TouchableNativeFeedback } from "react-native-gesture-handler";
 import Colors from "../../constants/Colors";
 
 const ProductItem = (props) => {
   return (
-    <TouchableOpacity onPress={props.onViewDetail}>
-      <View style={styles.product}>
-        <View style={styles.details}>
-          <Text style={styles.title}>{props.title}</Text>
-          <Text style={styles.price}>Rs. {props.price.toFixed(2)}</Text>
-        </View>
-        <View style={styles.actions}>
-          <Button
-            title="To Cart"
-            color={Colors.primary}
-            onPress={props.onAddToCart}
-          />
-        </View>
+    <View style={styles.product}>
+      <View style={styles.details}>
+        <Text style={styles.title}>{props.title}</Text>
+        <Text style={styles.price}>Rs. {props.price.toFixed(2)}</Text>
       </View>
-    </TouchableOpacity>
+      <View style={styles.actions}>
+        <Button
+          title="To Cart"
+          color={Colors.primary}
+          onPress={props.onAddToCart}
+        />
+      </View>
+    </View>
   );
 };
 
@@ -31,7 +30,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     borderRadius: 10,
     backgroundColor: "white",
-    height: 100,
+    height: 130,
     margin: 20,
     fontFamily: "sansita-bold",
   },
@@ -43,7 +42,7 @@ const styles = StyleSheet.create({
 
   title: {
     fontSize: 18,
-    marginVertical: 4,
+    marginVertical: 10,
     fontFamily: "sansita-bold",
   },
 
@@ -51,6 +50,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: "#888",
     fontFamily: "sansita-bold",
+    marginBottom: 10,
   },
 
   actions: {

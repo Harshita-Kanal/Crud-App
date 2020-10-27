@@ -11,7 +11,7 @@ const CartItem = (props) => {
         <Text style={styles.title}>{props.title}</Text>
       </View>
       <View style={styles.itemData}>
-        <Text style={styles.amount}>Rs.{props.amount}</Text>
+        <Text style={styles.amount}>Rs.{props.amount.toFixed(2)}</Text>
         <TouchableOpacity onPress={props.onRemove} style={styles.deleteButton}>
           <Ionicons
             name="md-trash"
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     flexDirection: "row",
     justifyContent: "space-between",
-    marginHorizontal: 20,
+    // marginHorizontal: 10,
   },
   itemData: {
     flexDirection: "row",
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   quantity: {
     fontFamily: "sansita-bold",
-    color: Colors.primary,
+    color: Colors.accent,
     fontSize: 16,
   },
   title: {
@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
     fontFamily: "sansita-bold",
     color: Colors.primary,
     fontSize: 16,
+    // marginBottom: 10,
   },
   deleteButton: {
     marginLeft: 20,
